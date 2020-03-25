@@ -24,3 +24,15 @@ The exact procedures made were:
 After identifying selected samples manually, rows which were considered as outlayers were: 25, 393, 186.
 
 At the pictures we can see each row and its surrounding neighbours. The outlayer row is alway in the middle.
+
+<p align="center">
+  <img src = "https://imgur.com/UmSqwER.png"/>
+</p>
+
+<p align="center">
+  <img src = "https://imgur.com/aFYjWq7.png"/>
+</p>
+
+<p align="center">
+  <img src = "https://imgur.com/Gw0mmsq.png"/>
+</p>
