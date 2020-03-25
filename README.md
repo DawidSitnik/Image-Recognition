@@ -39,3 +39,22 @@ In this case, the value of 5th columns was spaced further than std for the colum
 <p align="center">
   <img src = "https://imgur.com/Gw0mmsq.png"/>
 </p>
+
+## Feature Selection
+The next step is feature selection. For our case I decided to plot distribution of the points taking into consideration only two attributes. This process was repeated for each possible pair of the attributes and two the best results can be seen at the pictures bellow. 
+
+For attributes 2 and 4
+<p align="center">
+  <img src = "https://imgur.com/sbRgAmn.png"/>
+</p>
+
+For attributes 2 and 5
+<p align="center">
+  <img src = "https://imgur.com/4rZzyg9.png"/>
+</p>
+
+Better separation was obtained for the pair 2 and 4, so in the next part of our process the data will be limited only to those two features. 
+
+
+
+
