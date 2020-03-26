@@ -102,6 +102,7 @@ Form that picture we can deduce classification errors:
 * 1 sample of class 4 was classified as class 3
 * 4 samples of class 3 were classified as class 6
 
+
 ### 1-NN Classifier
 At the end the testing dataset was also classified with 1 nearest neighbour classifier. 
 
@@ -109,3 +110,33 @@ At the end the testing dataset was also classified with 1 nearest neighbour clas
 * before normalization: 0.014254
 * after normalization: 0.0027412
 
+*Formula used for normalization: (df(:,2) - min(df(:,2)))/(max(df(:,2)) - min(df(:,2)));*
+
+**At the end the whole process of classification was repeated for the same data but using only 4 features. As it was said before, the full dataset consist of two subsets from different sources so it is better to treat their classes separatelly. Lets check what happens if we ignore this issue.
+
+**Obtained Results (mean errors)**
+size = 1.0 of training data:
+* pdf_indep: 0.197368
+* pdf_multi: 0.049342
+* pdf_parzen: 
+
+size = 0.1 of training data:
+* pdf_indep = 0.17824
+* pdf_multi = 0.033255
+* pdf_parzen =
+
+size = 0.25 of training data:
+* pdf_indep = 0.17862
+* pdf_multi = 0.034846
+* pdf_parzen =
+
+size = 0.5 of training data:
+* pdf_indep = 0.17141
+* pdf_multi = 0.025353
+* pdf_parzen =
+
+1-NN, for full dataset:
+* before normalization: 0.0098684
+* after normalization: 5.4825e-04
+
+## Summary
