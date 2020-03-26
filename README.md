@@ -55,6 +55,39 @@ For attributes 2 and 5
 
 Better separation was obtained for the pair 2 and 4, so in the next part of our process the data will be limited only to those two features. 
 
+## Classification
 
+Firstly the classifiers has been tested on full length of datasets but containing features to chosen in previous part. Apriori of each class equaled to 1/(number of clases).
 
+**Obtained Results (mean errors)**
+*pdf_indep = 0.0279605
+*pdf_multi = 0.0038377
+*pdf_parzen = 
+
+Than the classification was tested only on the part of the length of the dataset. Because deleted rows were rejected randomly, the classification process was repeated 6 times for each classifiers and obtained result is the mean of those 6 attemps.
+
+The parts on which classifiers were trained has [0.1 0.25 0.5] of total amount of samples and each class has the same amount of samples deleted.
+
+**Obtained Results (mean errors)**
+size = 0.1 of training data:
+*pdf_indep = 0.0081104
+*pdf_multi = 0.0025344
+*pdf_parzen =
+
+size = 0.25 of training data:
+*pdf_indep = 0.0076888
+*pdf_multi = 0.0018925
+*pdf_parzen =
+
+size = 0.5 of training data:
+*pdf_indep = 0.0024620
+*pdf_multi = 0.0000000
+*pdf_parzen =
+
+At the end classification process was repeated with apriori = [0.165, 0.085, 0.085, 0.165, 0.165, 0.085, 0.085, 0.165], taking into account [1.0 0.5 0.5 1.0 1.0 0.5 0.5 1.0] number of samples from each class respectively.
+
+**Obtained Results (mean errors)**
+*pdf_indep = 
+*pdf_multi = 0.0012163
+*pdf_parzen = 0.00000
 
