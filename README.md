@@ -74,26 +74,34 @@ The parts on which classifiers were trained has [0.1 0.25 0.5] of total amount o
 size = 0.1 of training data:
 
 *pdf_indep = 0.0081104
+
 *pdf_multi = 0.0025344
+
 *pdf_parzen =
 
 size = 0.25 of training data:
 
 *pdf_indep = 0.0076888
+
 *pdf_multi = 0.0018925
+
 *pdf_parzen =
 
 size = 0.5 of training data:
 
 *pdf_indep = 0.0024620
+
 *pdf_multi = 0.0000000
+
 *pdf_parzen =
 
 At the end classification process was repeated with apriori = [0.165, 0.085, 0.085, 0.165, 0.165, 0.085, 0.085, 0.165], taking into account [1.0 0.5 0.5 1.0 1.0 0.5 0.5 1.0] number of samples from each class respectively.
 
 **Obtained Results (mean errors)**
 
-*pdf_indep = 
-*pdf_multi = 0.0012163
-*pdf_parzen = 0.00000
+*pdf_indep = 0.0012163
+
+*pdf_multi = 0.00000
+
+*pdf_parzen = 
 
