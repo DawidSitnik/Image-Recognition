@@ -9,7 +9,7 @@ function pdf = pdf_indep(pts, para)
 %	liczba kolumn = liczba klas
 
 	% znam rozmiar wyniku, wi�c go alokuj�
-	pdf = zeros(rows(pts), rows(para.mu))
+	pdf = zeros(rows(pts), rows(para.mu));
 
 	% tu trzeba policzy� warto�� funkcji g�sto�ci
 	% jako iloczyn g�sto�ci jednowymiarowych
