@@ -56,7 +56,7 @@ For attributes 2 and 5
 Better separation was obtained for the pair 2 and 4, so in the next part of our process the data will be limited only to those two features. 
 
 ## Classification
-
+### Bayesian Classifiers
 Firstly the classifiers has been tested on full length of datasets but containing features to chosen in previous part. Apriori of each class equaled to 1/(number of clases).
 
 **Obtained Results (mean errors)**
@@ -91,4 +91,21 @@ At the end classification process was repeated with apriori = [0.165, 0.085, 0.0
 * pdf_indep = 0.0012163
 * pdf_multi = 0.00000
 * pdf_parzen = 
+
+For the better understanding of the result there is a confusion matrix for the last case of pdf_indep classifier:
+<p align="center">
+  <img src = "https://imgur.com/yKJJqat.png"/>
+</p>
+
+Form that picture we can deduce classification errors:
+* 1 sample of class 4 was classified as class 1
+* 1 sample of class 4 was classified as class 3
+* 4 samples of class 3 were classified as class 6
+
+### 1-NN Classifier
+At the end the testing dataset was also classified with 1 nearest neighbour classifier. 
+
+**Obtained Results (mean errors)**
+* before normalization: 0.014254
+* after normalization: 0.0027412
 
