@@ -115,6 +115,7 @@ At the end the testing dataset was also classified with 1 nearest neighbour clas
 **At the end the whole process of classification was repeated for the same data but using only 4 features. As it was said before, the full dataset consist of two subsets from different sources so it is better to treat their classes separatelly. Lets check what happens if we ignore this issue.
 
 **Obtained Results (mean errors)**
+
 size = 1.0 of training data:
 * pdf_indep: 0.197368
 * pdf_multi: 0.049342
@@ -140,3 +141,8 @@ size = 0.5 of training data:
 * after normalization: 5.4825e-04
 
 ## Summary
+* For the chosen dataset, the best choice for the classifier was pdf_multi
+* The bigger training set is used, the better classifier we get
+* Data normalization significantly brightened 1-NN classifier
+* It was puproseful to use 8 classes while classification, however limiting its number to 4 doesn't soften the result that much
+* Taking into consideration appriori may strenghten our classifier
