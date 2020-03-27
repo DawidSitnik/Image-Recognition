@@ -62,7 +62,7 @@ Firstly the classifiers has been tested on full length of datasets but containin
 **Obtained Results (mean errors)**
 * pdf_indep = 0.0279605
 * pdf_multi = 0.0038377
-* pdf_parzen = 0.12829
+* pdf_parzen(window=0.001) = 0.12829
 
 Than the classification was tested only on the part of the length of the dataset. Because deleted rows were rejected randomly, the classification process was repeated 6 times for each classifiers and obtained result is the mean of those 6 attemps.
 
@@ -73,24 +73,24 @@ The parts on which classifiers were trained has [0.1 0.25 0.5] of total amount o
 size = 0.1 of training data:
 * pdf_indep = 0.0081104
 * pdf_multi = 0.0025344
-* pdf_parzen =
+* pdf_parzen(window=0.001) = 0.11689
 
 size = 0.25 of training data:
 * pdf_indep = 0.0076888
 * pdf_multi = 0.0018925
-* pdf_parzen =
+* pdf_parzen(window=0.001) = 0.12042
 
 size = 0.5 of training data:
 * pdf_indep = 0.0024620
 * pdf_multi = 0.0000000
-* pdf_parzen =
+* pdf_parzen(window=0.001) = 0.11470
 
 At the end classification process was repeated with apriori = [0.165, 0.085, 0.085, 0.165, 0.165, 0.085, 0.085, 0.165], taking into account [1.0 0.5 0.5 1.0 1.0 0.5 0.5 1.0] number of samples from each class respectively.
 
 **Obtained Results (mean errors)**
 * pdf_indep = 0.0012163
 * pdf_multi = 0.00000
-* pdf_parzen = 
+* pdf_parzen(window=0.001) = 0.10138
 
 For the better understanding of the result there is a confusion matrix for the last case of pdf_indep classifier:
 <p align="center">
@@ -102,6 +102,17 @@ Form that picture we can deduce classification errors:
 * 1 sample of class 4 was classified as class 3
 * 4 samples of class 3 were classified as class 6
 
+### Checking How Parzen Window Size Influences The Classifier
+For our consideration we tested pdf_parzen with window sizes = [0.5, 0.01, 0.005, 0.001, 0.0005, 0.0001].
+
+Obtained results are ilustrated at the picture below
+<p align="center">
+  <img src = "https://imgur.com/b3C6UfY.png"/>
+</p>
+
+As we can see, the result is much better for smaller size of the window.
+
+The exact values of mean error were respectively equaled to: [ 0.024123, 0.063596, 0.128289, 0.284539, 0.347039, 0.354715 ]
 
 ### 1-NN Classifier
 At the end the testing dataset was also classified with 1 nearest neighbour classifier. 
@@ -119,22 +130,22 @@ At the end the testing dataset was also classified with 1 nearest neighbour clas
 size = 1.0 of training data:
 * pdf_indep: 0.197368
 * pdf_multi: 0.049342
-* pdf_parzen: 
+* pdf_parzen: 0.13892
 
 size = 0.1 of training data:
 * pdf_indep = 0.17824
 * pdf_multi = 0.033255
-* pdf_parzen =
+* pdf_parzen = 0.14887
 
 size = 0.25 of training data:
 * pdf_indep = 0.17862
 * pdf_multi = 0.034846
-* pdf_parzen =
+* pdf_parzen = 0.14111
 
 size = 0.5 of training data:
 * pdf_indep = 0.17141
 * pdf_multi = 0.025353
-* pdf_parzen =
+* pdf_parzen = 0.13912
 
 1-NN, for full dataset:
 * before normalization: 0.0098684
@@ -146,3 +157,4 @@ size = 0.5 of training data:
 * Data normalization significantly brightened 1-NN classifier
 * It was puproseful to use 8 classes while classification, however limiting its number to 4 doesn't soften the result that much
 * Taking into consideration appriori may strenghten our classifier
+* Smaller parzen window helpes stranghtening the classifier
