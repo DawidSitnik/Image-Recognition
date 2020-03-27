@@ -9,7 +9,7 @@ load test.txt
 
 % because our data contains really samples from two populations
 % we replace "client" labels with labels more suitable for classification
-for i=77:152:1824
-	train(i:i+75,1) += 4;
-	test(i:i+75,1) += 4;
-end
+%for i=77:152:1824
+	%train(i:i+75,1) += 4;
+	%test(i:i+75,1) += 4;
+%end

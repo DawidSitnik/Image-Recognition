@@ -16,7 +16,4 @@ function para = para_parzen(ts, width = 0.0001)
 		para.samples{i} = ts(ts(:,1) == labels(i), 2:end);
 	end
 
-	for i=1:rows(labels)
-		para.samples{i,:} = sort(para.samples{i,:});
-	end
 end
