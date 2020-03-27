@@ -62,7 +62,7 @@ Firstly the classifiers has been tested on full length of datasets but containin
 **Obtained Results (mean errors)**
 * pdf_indep = 0.0279605
 * pdf_multi = 0.0038377
-* pdf_parzen = 
+* pdf_parzen = 0.12829
 
 Than the classification was tested only on the part of the length of the dataset. Because deleted rows were rejected randomly, the classification process was repeated 6 times for each classifiers and obtained result is the mean of those 6 attemps.
 
